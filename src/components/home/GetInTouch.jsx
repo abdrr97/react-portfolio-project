@@ -6,7 +6,7 @@ const GetInTouch = () => {
       <section className='connect'>
         <video
           controls
-          autoplay
+          autoPlay
           muted
           loop
           poster='./images/project-4.jpeg'

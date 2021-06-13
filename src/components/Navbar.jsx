@@ -1,7 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import { AuthContext } from '../context/authContext'
 
 const Navbar = () => {
+  const { currentUser, logout } = useContext(AuthContext)
+
+  // auth
+  const [authError, setAuthError] = useState('')
+  const [isLoading, setIsLoading] = useState(false)
+  const history = useHistory()
+
+  const handleLogout = () => {
+    setAuthError('')
+    try {
+      logout().then(() => {
+        history.push('/log-in')
+      })
+    } catch (ex) {
+      setAuthError(ex.message)
+    }
+  }
   return (
     <>
       <nav className='nav' id='nav'>
@@ -25,9 +43,23 @@ const Navbar = () => {
             <li>
               <Link to='/contact'>contact</Link>
             </li>
-            <li>
-              <Link to='/profile'>my profile</Link>
-            </li>
+
+            {currentUser ? (
+              <>
+                <li>
+                  <Link to='/profile'>my profile</Link>
+                </li>
+                <li>
+                  <button onClick={handleLogout} className='nav__link'>
+                    logout
+                  </button>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link to='/log-in'>login</Link>
+              </li>
+            )}
           </ul>
         </div>
       </nav>

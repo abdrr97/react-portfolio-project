@@ -4,8 +4,13 @@ import UpdateProfile from './auth/UpdateProfile'
 const Profile = () => {
   return (
     <>
-      <h1>Profile</h1>
-      <UpdateProfile />
+      <section className='login'>
+        <div className='section-title'>
+          <h1>Profile</h1>
+          <div className='underline'></div>
+        </div>
+        <UpdateProfile />
+      </section>
     </>
   )
 }

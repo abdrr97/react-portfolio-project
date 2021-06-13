@@ -50,7 +50,9 @@ const UpdateProfile = () => {
       <div className='w-100' style={{ maxWidth: '400px' }}>
         <div className='card'>
           <div className='card-body'>
-            <h2 className='text-center mb-4'>Update Profile</h2>
+            <div className='section-title'>
+              <h3>Update Profile</h3>
+            </div>
 
             <form action='' onSubmit={handleUpdateProfile}>
               {error && <div className='alert alert-danger'>{error}</div>}
@@ -64,8 +66,6 @@ const UpdateProfile = () => {
                   name='email'
                   type='email'
                   placeholder='email goes here '
-                  className='form-control'
-                  defaultValue={currentUser.email}
                   value={email}
                 />
               </div>
@@ -78,7 +78,6 @@ const UpdateProfile = () => {
                   name='password'
                   type='password'
                   placeholder='Leave it empty to keep the same'
-                  className='form-control'
                 />
               </div>
               <div className='form-group'>
@@ -90,26 +89,22 @@ const UpdateProfile = () => {
                   name='password-confirmation'
                   type='password'
                   placeholder='Leave it empty to keep the same'
-                  className='form-control'
                 />
               </div>
 
-              <button disabled={isLoading} type='submit' className='w-100 btn btn-primary mt-5'>
-                {isLoading ? (
-                  <div className='d-flex justify-content-center'>
-                    <div className='spinner-border' role='status'>
-                      <span className='sr-only'>Loading...</span>
-                    </div>
-                  </div>
-                ) : (
-                  'Update Profile'
-                )}
+              <button
+                disabled={isLoading}
+                type='submit'
+                className='btn'
+                style={{ margin: '0 10px 0 0' }}
+              >
+                {isLoading ? 'loading ... ' : 'Update Profile'}
               </button>
+              <Link className='btn' to='/'>
+                Cancel
+              </Link>
             </form>
           </div>
-        </div>
-        <div className='w-100 text-center mt-2'>
-          <Link to='/'>Cancel</Link>
         </div>
       </div>
     </>
