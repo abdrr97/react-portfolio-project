@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
+import { PortfolioContext } from '../../context'
 
 const Skills = () => {
+  const { skills, removeSkill, loading } = useContext(PortfolioContext)
+
+  // const frontEndSkills = skills.filter(()=>)
+  // const backEndSkills = []
+
+  useEffect(() => {
+    console.log(skills)
+  }, [skills])
+
   return (
     <>
       <section className='skills section'>
@@ -15,14 +25,14 @@ const Skills = () => {
               <p>HTML/CSS</p>
               <div className='skill-container'>
                 <div className='skill-value'></div>
-                <p className='skill-text'>50%</p>
+                <p className='skill-text'>100%</p>
               </div>
             </div>
             <div className='skill'>
               <p>javascript</p>
               <div className='skill-container'>
                 <div className='skill-value value-70'></div>
-                <p className='skill-text skill-text-70'>70%</p>
+                <p className='skill-text'>70%</p>
               </div>
             </div>
             <div className='skill'>
@@ -46,14 +56,14 @@ const Skills = () => {
               <p>PHP</p>
               <div className='skill-container'>
                 <div className='skill-value value-70'></div>
-                <p className='skill-text skill-text-70'>70%</p>
+                <p className='skill-text'>70%</p>
               </div>
             </div>
             <div className='skill'>
               <p>python</p>
               <div className='skill-container'>
-                <div className='skill-value value-80'></div>
-                <p className='skill-text skill-text-80'>80%</p>
+                <div className='skill-value'></div>
+                <p className='skill-text'>80%</p>
               </div>
             </div>
           </article>

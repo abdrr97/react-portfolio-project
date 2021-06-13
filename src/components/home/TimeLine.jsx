@@ -1,62 +1,43 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PortfolioContext } from '../../context'
+import { AuthContext } from '../../context/authContext'
 
 const TimeLineSection = () => {
+  const { timelines, loading, removeTimeline } = useContext(PortfolioContext)
+  const { currentUser } = useContext(AuthContext)
+
   return (
     <>
-      <section className='section timeline'>
+      <section className='section '>
         <div className='section-title'>
           <h2>timeline</h2>
           <div className='underline'></div>
         </div>
+        {loading && <h1>loading ....</h1>}
+
         <div className='section-center timeline-center'>
-          <article className='timeline-item'>
-            <h4>2020</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil voluptatibus
-              exercitationem sapiente odit incidunt tempora facere aliquam. Adipisci, asperiores.
-            </p>
-            <span className='number'>1</span>
-          </article>
-          <article className='timeline-item'>
-            <h4>2019</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil voluptatibus
-              exercitationem sapiente odit incidunt tempora facere aliquam. Adipisci, asperiores.
-            </p>
-            <span className='number'>2</span>
-          </article>
-          <article className='timeline-item'>
-            <h4>2018</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil voluptatibus
-              exercitationem sapiente odit incidunt tempora facere aliquam. Adipisci, asperiores.
-            </p>
-            <span className='number'>3</span>
-          </article>
-          <article className='timeline-item'>
-            <h4>2017</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil voluptatibus
-              exercitationem sapiente odit incidunt tempora facere aliquam. Adipisci, asperiores.
-            </p>
-            <span className='number'>4</span>
-          </article>
-          <article className='timeline-item'>
-            <h4>2016</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil voluptatibus
-              exercitationem sapiente odit incidunt tempora facere aliquam. Adipisci, asperiores.
-            </p>
-            <span className='number'>5</span>
-          </article>
-          <article className='timeline-item'>
-            <h4>2015</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia nihil voluptatibus
-              exercitationem sapiente odit incidunt tempora facere aliquam. Adipisci, asperiores.
-            </p>
-            <span className='number'>6</span>
-          </article>
+          {!loading &&
+            timelines.map(({ docId, year, desc }, idx) => {
+              return (
+                <article key={docId} className='timeline-item'>
+                  <div
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <h4>{year}</h4>
+                    {currentUser && (
+                      <button onClick={() => removeTimeline(docId)} className='btn'>
+                        x
+                      </button>
+                    )}
+                  </div>
+                  <p>{desc}</p>
+                  <span className='number'>{idx + 1}</span>
+                </article>
+              )
+            })}
         </div>
       </section>
     </>

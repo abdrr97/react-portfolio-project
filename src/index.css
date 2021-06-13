@@ -232,6 +232,7 @@ Navbar
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     justify-items: center;
+    align-items: center;
     -webkit-column-gap: 2rem;
     -moz-column-gap: 2rem;
     column-gap: 2rem;
@@ -1007,12 +1008,14 @@ Projects
   justify-self: end;
 }
 
+/* TODO: LOGIN */
+
 .login {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 242px);
+  min-height: calc(100vh - 242px);
 }
 
 .login .form-group {
@@ -1023,8 +1026,58 @@ Projects
   width: 250px;
   margin-bottom: 20px;
 }
-.login input {
+.login input,
+.login select {
+  border-radius: 5px;
+  border: 1px solid gray;
   height: 35px;
   width: 300px;
   padding: 5px;
+  box-shadow: var(--light-shadow);
+}
+.login textarea {
+  border-radius: 5px;
+  border: 1px solid gray;
+  box-shadow: var(--light-shadow);
+}
+
+.login {
+  position: relative;
+}
+.login .links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* position: absolute; */
+  /* top: 30px; */
+  /* height: 100px; */
+}
+.login .links .link {
+  font-size: 25px;
+  text-transform: capitalize;
+  letter-spacing: 1.4px;
+  color: #222;
+}
+.login .links li {
+  margin: 20px;
+}
+
+.login .links .link:hover {
+  text-decoration: underline;
+}
+
+.alert.alert-danger {
+  background-color: #e66b6b;
+  padding: 10px;
+  color: white;
+  margin: 10px 0;
+}
+
+.login .timeline {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+}
+.login form.timeline-form {
+  margin-bottom: 50px;
 }

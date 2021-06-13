@@ -14,7 +14,6 @@ const About = () => {
             spend most of my day, experimenting with HTML, CSS and JavaScript (and its endless list
             of frameworks). I enjoy coding and the challenge of learning something new everyday. You
             can also find me at youtube channel
-            <a href='https://www.youtube.com/channel/UCMZFwxv5l-XtKi693qMJptA'>coding addict</a>
           </p>
         </div>
       </section>

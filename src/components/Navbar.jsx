@@ -7,7 +7,6 @@ const Navbar = () => {
 
   // auth
   const [authError, setAuthError] = useState('')
-  const [isLoading, setIsLoading] = useState(false)
   const history = useHistory()
 
   const handleLogout = () => {
@@ -25,7 +24,7 @@ const Navbar = () => {
       <nav className='nav' id='nav'>
         <div className='nav-center'>
           <div className='nav-header'>
-            <img src='./images/logo.svg' className='nav-logo' alt='' />
+            <h3 className='nav-logo'>{currentUser && currentUser.email.split('@')[0]}</h3>
             <button className='nav-btn' id='nav-btn'>
               <i className='fas fa-bars'></i>
             </button>
@@ -48,6 +47,8 @@ const Navbar = () => {
               <>
                 <li>
                   <Link to='/profile'>my profile</Link>
+                  <br />
+                  <small>{currentUser.email}</small>
                 </li>
                 <li>
                   <button onClick={handleLogout} className='nav__link'>
@@ -63,6 +64,7 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
+      {authError && authError}
     </>
   )
 }
