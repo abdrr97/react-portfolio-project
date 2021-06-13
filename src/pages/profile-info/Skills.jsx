@@ -1,10 +1,11 @@
 import React, { useContext, useState } from 'react'
 import { PortfolioContext } from '../../context'
 import { Skills as SkillsComp } from '../../components/home'
+
 const Skills = () => {
   const { addSkill } = useContext(PortfolioContext)
   const [language, setLanguage] = useState('')
-  const [present, setPresent] = useState(50)
+  const [persent, setPersent] = useState(50)
   const [type, setType] = useState('front-end')
 
   const handleSubmit = (e) => {
@@ -12,14 +13,14 @@ const Skills = () => {
 
     const skills = {
       language,
-      present,
+      persent,
       type,
     }
 
     addSkill(skills)
 
     setLanguage('')
-    setPresent('')
+    setPersent(50)
     setType('')
   }
 
@@ -38,19 +39,19 @@ const Skills = () => {
           />
         </div>
         <div className='timeline'>
-          <label htmlFor='timeline-present'>Present {present}%</label>
+          <label htmlFor='timeline-persent'>Persent {persent}%</label>
           <input
-            value={present}
-            onChange={({ target }) => setPresent(target.value)}
+            value={persent}
+            onChange={({ target }) => setPersent(target.value)}
             type='range'
             min='0'
             max='100'
-            id='timeline-present'
+            id='timeline-persent'
           />
         </div>
         <div className='timeline'>
           <label htmlFor='timeline-type'>Type</label>
-          <select id='timeline-type'>
+          <select onChange={({ target }) => setType(target.value)} id='timeline-type'>
             <option value='front-end'>Front end</option>
             <option value='back-end'>Back end</option>
           </select>
