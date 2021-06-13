@@ -3,12 +3,12 @@ import React from 'react'
 const About = () => {
   return (
     <>
-      <section class='section single-page'>
-        <div class='section-title'>
+      <section className='section single-page'>
+        <div className='section-title'>
           <h1>about me</h1>
-          <div class='underline'></div>
+          <div className='underline'></div>
         </div>
-        <div class='section-center page-info'>
+        <div className='section-center page-info'>
           <p>
             Hello, I am John Doe and I am a web developer. I live and work in somewhere warm. I
             spend most of my day, experimenting with HTML, CSS and JavaScript (and its endless list

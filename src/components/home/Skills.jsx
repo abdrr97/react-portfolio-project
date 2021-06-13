@@ -3,57 +3,57 @@ import React from 'react'
 const Skills = () => {
   return (
     <>
-      <section class='skills section'>
-        <div class='section-title'>
+      <section className='skills section'>
+        <div className='section-title'>
           <h2>skills</h2>
-          <div class='underline'></div>
+          <div className='underline'></div>
         </div>
-        <div class='section-center skills-center'>
+        <div className='section-center skills-center'>
           <article>
             <h3>front end</h3>
-            <div class='skill'>
+            <div className='skill'>
               <p>HTML/CSS</p>
-              <div class='skill-container'>
-                <div class='skill-value'></div>
-                <p class='skill-text'>50%</p>
+              <div className='skill-container'>
+                <div className='skill-value'></div>
+                <p className='skill-text'>50%</p>
               </div>
             </div>
-            <div class='skill'>
+            <div className='skill'>
               <p>javascript</p>
-              <div class='skill-container'>
-                <div class='skill-value value-70'></div>
-                <p class='skill-text skill-text-70'>70%</p>
+              <div className='skill-container'>
+                <div className='skill-value value-70'></div>
+                <p className='skill-text skill-text-70'>70%</p>
               </div>
             </div>
-            <div class='skill'>
+            <div className='skill'>
               <p>react</p>
-              <div class='skill-container'>
-                <div class='skill-value value-80'></div>
-                <p class='skill-text skill-text-80'>80%</p>
+              <div className='skill-container'>
+                <div className='skill-value value-80'></div>
+                <p className='skill-text skill-text-80'>80%</p>
               </div>
             </div>
           </article>
           <article>
             <h3>back end</h3>
-            <div class='skill'>
+            <div className='skill'>
               <p>node</p>
-              <div class='skill-container'>
-                <div class='skill-value'></div>
-                <p class='skill-text'>50%</p>
+              <div className='skill-container'>
+                <div className='skill-value'></div>
+                <p className='skill-text'>50%</p>
               </div>
             </div>
-            <div class='skill'>
+            <div className='skill'>
               <p>PHP</p>
-              <div class='skill-container'>
-                <div class='skill-value value-70'></div>
-                <p class='skill-text skill-text-70'>70%</p>
+              <div className='skill-container'>
+                <div className='skill-value value-70'></div>
+                <p className='skill-text skill-text-70'>70%</p>
               </div>
             </div>
-            <div class='skill'>
+            <div className='skill'>
               <p>python</p>
-              <div class='skill-container'>
-                <div class='skill-value value-80'></div>
-                <p class='skill-text skill-text-80'>80%</p>
+              <div className='skill-container'>
+                <div className='skill-value value-80'></div>
+                <p className='skill-text skill-text-80'>80%</p>
               </div>
             </div>
           </article>

@@ -3,31 +3,31 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-      <footer class='footer'>
-        <ul class='social-icons'>
+      <footer className='footer'>
+        <ul className='social-icons'>
           <li>
-            <a href='https://www.twitter.com' class='social-icon'>
-              <i class='fab fa-facebook'></i>
+            <a href='https://www.twitter.com' className='social-icon'>
+              <i className='fab fa-facebook'></i>
             </a>
           </li>
           <li>
-            <a href='https://www.twitter.com' class='social-icon'>
-              <i class='fab fa-linkedin'></i>
+            <a href='https://www.twitter.com' className='social-icon'>
+              <i className='fab fa-linkedin'></i>
             </a>
           </li>
           <li>
-            <a href='https://www.twitter.com' class='social-icon'>
-              <i class='fab fa-squarespace'></i>
+            <a href='https://www.twitter.com' className='social-icon'>
+              <i className='fab fa-squarespace'></i>
             </a>
           </li>
           <li>
-            <a href='https://www.twitter.com' class='social-icon'>
-              <i class='fab fa-behance'></i>
+            <a href='https://www.twitter.com' className='social-icon'>
+              <i className='fab fa-behance'></i>
             </a>
           </li>
           <li>
-            <a href='https://www.twitter.com' class='social-icon'>
-              <i class='fab fa-instagram'></i>
+            <a href='https://www.twitter.com' className='social-icon'>
+              <i className='fab fa-instagram'></i>
             </a>
           </li>
         </ul>

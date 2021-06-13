@@ -25,6 +25,9 @@ const Navbar = () => {
             <li>
               <Link to='/contact'>contact</Link>
             </li>
+            <li>
+              <Link to='/profile'>my profile</Link>
+            </li>
           </ul>
         </div>
       </nav>

@@ -3,12 +3,12 @@ import React from 'react'
 const Contact = () => {
   return (
     <>
-      <section class='section single-page'>
-        <div class='section-title'>
+      <section className='section single-page'>
+        <div className='section-title'>
           <h1>contact</h1>
-          <div class='underline'></div>
+          <div className='underline'></div>
         </div>
-        <div class='page-info section-center'>
+        <div className='page-info section-center'>
           <p>
             If you are looking to get ahold of me, you can send me an email at
             <a href='mailto:email@email.com'>@your_email</a>
